@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://ckd5hqxqyxu00"]
+
+[ext_resource type="Script" uid="uid://dcber4xlgn63x" path="res://scenes/main_menu/MainMenu.gd" id="1_isws5"]
+[ext_resource type="PackedScene" uid="uid://cg23iyopfayqs" path="res://core/ui/components/PHButton.tscn" id="2_axelx"]
+[ext_resource type="PackedScene" uid="uid://c5777xg3l863d" path="res://core/ui/background/BackgroundScene.tscn" id="2_xr86y"]
+
+[node name="MainMenu" type="Control" unique_id=1573768771]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_isws5")
+
+[node name="Background" parent="." unique_id=287997469 instance=ExtResource("2_xr86y")]
+layout_mode = 0
+
+[node name="WorldLayer" type="Control" parent="." unique_id=1329394081]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=2064853817]
+
+[node name="SafeArea" type="MarginContainer" parent="UILayer" unique_id=144277503]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UILayer/SafeArea" unique_id=1365717096]
+layout_mode = 2
+
+[node name="Logo" type="Label" parent="UILayer/SafeArea/VBoxContainer" unique_id=1414152752]
+layout_mode = 2
+text = "PARTY HUB"
+
+[node name="Buttons" type="VBoxContainer" parent="UILayer/SafeArea/VBoxContainer" unique_id=242339787]
+layout_mode = 2
+
+[node name="CreateRoomButton" parent="UILayer/SafeArea/VBoxContainer/Buttons" unique_id=608303543 instance=ExtResource("2_axelx")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Create Room"
+
+[node name="JoinRoomButton" parent="UILayer/SafeArea/VBoxContainer/Buttons" unique_id=1552337185 instance=ExtResource("2_axelx")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Join Room"
+
+[node name="SettingsButton" parent="UILayer/SafeArea/VBoxContainer/Buttons" unique_id=1700885980 instance=ExtResource("2_axelx")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Settings"
+
+[node name="Footer" type="Label" parent="UILayer/SafeArea/VBoxContainer" unique_id=762240161]
+layout_mode = 2
+text = "Version 0.1"
+
+[node name="PopupLayer" type="CanvasLayer" parent="." unique_id=1448153718]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=573478069]

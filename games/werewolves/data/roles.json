@@ -1,0 +1,42 @@
+[
+  {
+	"id": "villager",
+	"display_name": "Villager",
+	"description": "A simple villager with no night ability.",
+	"alignment": "village",
+	"power": 1,
+	"appears_good": true,
+	"appears_bad": false,
+	"can_act_at_night": false
+  },
+  {
+	"id": "werewolf",
+	"display_name": "Werewolf",
+	"description": "Works with the werewolf pack to eliminate villagers.",
+	"alignment": "werewolf",
+	"power": 5,
+	"appears_good": false,
+	"appears_bad": true,
+	"can_act_at_night": true
+  },
+  {
+	"id": "doctor",
+	"display_name": "Doctor",
+	"description": "Protects one player every night.",
+	"alignment": "village",
+	"power": 3,
+	"appears_good": true,
+	"appears_bad": false,
+	"can_act_at_night": true
+  },
+  {
+	"id": "blue_seer",
+	"display_name": "Blue Seer",
+	"description": "Learns whether a player is Good, Bad or Unknown.",
+	"alignment": "village",
+	"power": 4,
+	"appears_good": true,
+	"appears_bad": false,
+	"can_act_at_night": true
+  }
+]

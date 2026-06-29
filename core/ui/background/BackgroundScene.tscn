@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://c5777xg3l863d"]
+
+[ext_resource type="Script" uid="uid://du2clgxjeapwy" path="res://core/ui/background/BackgroundScene.gd" id="1_8sx5k"]
+
+[node name="BackgroundScene" type="Control" unique_id=287997469]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8sx5k")
+
+[node name="Sky" type="ColorRect" parent="." unique_id=1865430599]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(27.096022, 15.385263)
+color = Color(0.31764707, 0.65882355, 1, 1)
+
+[node name="Stars" type="Control" parent="." unique_id=646204024]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Moon" type="TextureRect" parent="." unique_id=704555943]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ForestBack" type="ColorRect" parent="." unique_id=1204914247]
+layout_mode = 0
+offset_top = 249.00002
+offset_right = 40.0
+offset_bottom = 272.91992
+scale = Vector2(27.133844, 15.484973)
+color = Color(0.1195967, 0.38602915, 1.2995303e-06, 1)
+
+[node name="ForestFront" type="ColorRect" parent="." unique_id=1515450459]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 322.0
+offset_right = 41.0
+offset_bottom = 362.0
+scale = Vector2(27.111109, 7.4275355)
+color = Color(0.5254902, 1, 0.5294118, 1)
+
+[node name="Campfire" type="Control" parent="." unique_id=584965063]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FireGlow" type="ColorRect" parent="Campfire" unique_id=864244344]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 412.0
+offset_right = 545.0
+offset_bottom = 452.0
+color = Color(1, 0.5137255, 0.10980392, 1)
+
+[node name="Fire" type="ColorRect" parent="Campfire" unique_id=746870238]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 429.99997
+offset_right = 549.0
+offset_bottom = 469.99997
+scale = Vector2(0.7983871, 0.79591835)
+color = Color(1, 1, 0.38431373, 1)
+
+[node name="Embers" type="Control" parent="Campfire" unique_id=1102476126]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Fireflies" type="Control" parent="." unique_id=1965251086]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1656893937]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c5uetgb7vauk7"]
+
+[ext_resource type="Script" uid="uid://ybwer0ok6dq7" path="res://scenes/shared/SceneRoot.gd" id="1_lr1i3"]
+
+[node name="SceneRoot" type="Control" unique_id=923212324]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lr1i3")
+
+[node name="CurrentScene" type="Control" parent="." unique_id=1460025965]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Overlay" type="CanvasLayer" parent="." unique_id=894622021]
+
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=987026776]

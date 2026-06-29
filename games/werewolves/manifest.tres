@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GameManifest" format=3 uid="uid://drbf80yanypwf"]
+
+[ext_resource type="Script" uid="uid://dcn5o2jqoyfdk" path="res://core/resources/GameManifest.gd" id="1_62tbb"]
+
+[resource]
+script = ExtResource("1_62tbb")
+id = "werewolves"
+display_name = "Werewolves"
+description = "A social deduction game of deception and teamwork."
+min_players = 5
+author = "snetch"
+metadata/_custom_type_script = "uid://dcn5o2jqoyfdk"

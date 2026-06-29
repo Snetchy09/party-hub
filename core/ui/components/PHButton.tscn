@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cg23iyopfayqs"]
+
+[ext_resource type="Script" uid="uid://bwts44ip5y2m4" path="res://core/ui/components/PHButton.gd" id="1_4e88n"]
+
+[node name="PhButton" type="Button" unique_id=608303543]
+script = ExtResource("1_4e88n")
