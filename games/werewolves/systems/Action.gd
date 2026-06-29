@@ -2,8 +2,8 @@
 class_name Action
 extends Node
 
-var actor: GameSession.WWPlayerState
-var target: GameSession.WWPlayerState
+var actor: WWPlayerState
+var target: WWPlayerState
 var action_type: String
 
 func resolve() -> void:

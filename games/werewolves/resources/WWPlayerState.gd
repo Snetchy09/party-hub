@@ -1,16 +1,20 @@
-class_name WWPlayerstate
+class_name WWPlayerState
 extends RefCounted
 
 var player: PlayerData
-var role: RoleData          # assigned role
-var statuses: Array = []    # e.g. ["used_ability", "cursed"]
-var night_action: Dictionary = {}  # details of chosen action
-var vote: int = -1          # voted player ID
-var lover: int = -1         # ID of lover (if any)
-var team_override: String = "" # if role is changed by effect
-var death_cause: String = ""   # e.g. "night kill", "lynch"
+var role: RoleData
+var alive: bool = true  # ← ADD THIS
+var statuses: Dictionary = {}  # ← CHANGE FROM Array to Dictionary
+var role_revealed: bool = false  # ← ADD THIS
+var night_action: Dictionary = {}
+var vote: int = -1
+var lover: int = -1
+var team_override: String = ""
+var death_cause: String = ""
+var action_submitted: bool = false  # ← ADD THIS
 
 func _init(player_data: PlayerData) -> void:
 	player = player_data
 	role = null
-	statuses.clear()
+	alive = true
+	statuses = {}

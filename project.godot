@@ -25,7 +25,6 @@ PlayerManager="*uid://ckg3u3pkifm83"
 AudioManager="*uid://d2cqrcnofu2a5"
 SettingsManager="*uid://cmkgcjcsgxleu"
 ThemeManager="*uid://goknlo3j8dri"
-NetworkManager="*uid://ben18rr1i5kcg"
 
 [display]
 
