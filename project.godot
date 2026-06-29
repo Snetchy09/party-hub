@@ -23,9 +23,9 @@ GameManager="*uid://c01hklck07bey"
 GameLoader="*uid://cn20huschtnlu"
 PlayerManager="*uid://ckg3u3pkifm83"
 AudioManager="*uid://d2cqrcnofu2a5"
-NetworkManager="*uid://ben18rr1i5kcg"
 SettingsManager="*uid://cmkgcjcsgxleu"
 ThemeManager="*uid://goknlo3j8dri"
+NetworkManager="*uid://ben18rr1i5kcg"
 
 [display]
 

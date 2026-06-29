@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bo1kkhlu42afu"]
+
+[node name="PlayerCard" type="Control" unique_id=1438564692]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Avatar" type="TextureRect" parent="." unique_id=1354931503]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NameLabel" type="Label" parent="." unique_id=429337235]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="RoleLabel" type="Label" parent="." unique_id=795850799]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="StatusContainer" type="HBoxContainer" parent="." unique_id=1953124756]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DeadOverlay" type="ColorRect" parent="." unique_id=1420996173]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

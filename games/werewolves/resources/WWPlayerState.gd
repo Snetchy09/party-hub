@@ -1,4 +1,4 @@
-class_name WWPlayerState
+class_name WWPlayerstate
 extends RefCounted
 
 var player: PlayerData
