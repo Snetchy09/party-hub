@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="party hub"
-run/main_scene="uid://7e1nekvralah"
+run/main_scene="uid://dxlxq053cmree"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 

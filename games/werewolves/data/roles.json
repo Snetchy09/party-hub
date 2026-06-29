@@ -1,42 +1,72 @@
 [
-  {
-	"id": "villager",
-	"display_name": "Villager",
-	"description": "A simple villager with no night ability.",
-	"alignment": "village",
-	"power": 1,
-	"appears_good": true,
-	"appears_bad": false,
-	"can_act_at_night": false
-  },
-  {
-	"id": "werewolf",
-	"display_name": "Werewolf",
-	"description": "Works with the werewolf pack to eliminate villagers.",
-	"alignment": "werewolf",
-	"power": 5,
-	"appears_good": false,
-	"appears_bad": true,
-	"can_act_at_night": true
-  },
-  {
-	"id": "doctor",
-	"display_name": "Doctor",
-	"description": "Protects one player every night.",
-	"alignment": "village",
-	"power": 3,
-	"appears_good": true,
-	"appears_bad": false,
-	"can_act_at_night": true
-  },
-  {
-	"id": "blue_seer",
-	"display_name": "Blue Seer",
-	"description": "Learns whether a player is Good, Bad or Unknown.",
-	"alignment": "village",
-	"power": 4,
-	"appears_good": true,
-	"appears_bad": false,
-	"can_act_at_night": true
-  }
+	{
+		"id": "villager",
+		"display_name": "Villager",
+		"description": "An ordinary villager with no special ability.",
+		"team": "village",
+		"power": 1,
+		"rarity": 1,
+		"unique": false,
+		"min_players": 1,
+		"appears_good": true,
+		"appears_bad": false,
+		"can_act_at_night": false,
+		"tags": ["basic"]
+	},
+	{
+		"id": "werewolf",
+		"display_name": "Werewolf",
+		"description": "Works with the other werewolves to eliminate the village.",
+		"team": "werewolves",
+		"power": 5,
+		"rarity": 1,
+		"unique": false,
+		"min_players": 5,
+		"appears_good": false,
+		"appears_bad": true,
+		"can_act_at_night": true,
+		"tags": ["killer"]
+	},
+	{
+		"id": "doctor",
+		"display_name": "Doctor",
+		"description": "Protects one player each night.",
+		"team": "village",
+		"power": 4,
+		"rarity": 2,
+		"unique": true,
+		"min_players": 6,
+		"appears_good": true,
+		"appears_bad": false,
+		"can_act_at_night": true,
+		"tags": ["protector"]
+	},
+	{
+		"id": "blue_seer",
+		"display_name": "Blue Seer",
+		"description": "Investigates one player each night.",
+		"team": "village",
+		"power": 4,
+		"rarity": 2,
+		"unique": true,
+		"min_players": 7,
+		"appears_good": true,
+		"appears_bad": false,
+		"can_act_at_night": true,
+		"tags": ["investigator"]
+	},
+	{
+		"id": "lone_wolf",
+		"display_name": "Lone Wolf",
+		"description": "Becomes stronger after every other werewolf dies.",
+		"team": "werewolves",
+		"power": 6,
+		"rarity": 3,
+		"unique": true,
+		"min_players": 8,
+		"appears_good": false,
+		"appears_bad": true,
+		"can_act_at_night": true,
+		"tags": ["killer", "late_game"]
+	}
 ]
