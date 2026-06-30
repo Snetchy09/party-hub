@@ -1,33 +1,28 @@
 extends Node
 
-var current_player: PlayerData
-var all_players: Array[PlayerData] = []
-var players_by_id: Dictionary = {}
-var is_host: bool = false
-var peer_id: int = -1
+var players: Dictionary = {}  # peer_id -> PlayerData
+var local_settings: Dictionary = {}
 
-func initialize(is_host: bool, player_name: String) -> void:
-	self.is_host = is_host
-	current_player = PlayerData.new()
-	current_player.name = player_name
-	current_player.id = randi_range(1, 1000000)
-	
-	all_players.append(current_player)
-	players_by_id[current_player.id] = current_player
+func reset() -> void:
+	players.clear()
 
-func add_player(player_id: int, player_name: String) -> void:
-	var player = PlayerData.new()
-	player.id = player_id
-	player.name = player_name
-	all_players.append(player)
-	players_by_id[player_id] = player
-	print("Added player: %s (%d)" % [player_name, player_id])
+func add_player(peer_id: int, display_name: String, is_host: bool = false) -> void:
+	var p := PlayerData.new(peer_id, display_name)
+	p.is_host = is_host
+	players[peer_id] = p
 
-func get_player(player_id: int) -> PlayerData:
-	return players_by_id.get(player_id)
+func remove_player(peer_id: int) -> void:
+	players.erase(peer_id)
 
 func get_all_players() -> Array[PlayerData]:
-	return all_players
+	var result: Array[PlayerData] = []
+	for p in players.values():
+		result.append(p)
+	return result
+
+func get_player(peer_id: int) -> PlayerData:
+	return players.get(peer_id, null)
 
 func get_current_player() -> PlayerData:
-	return current_player
+	var my_id := NetworkManager.get_my_peer_id()
+	return get_player(my_id)

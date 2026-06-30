@@ -11,20 +11,23 @@ config_version=5
 [application]
 
 config/name="party hub"
-run/main_scene="uid://dxlxq053cmree"
+run/main_scene="uid://7e1nekvralah"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-SceneManager="*uid://dbxhjee0rf2yl"
-GameRegistry="*uid://cc623x8nvjpp1"
-GameManager="*uid://c01hklck07bey"
-GameLoader="*uid://cn20huschtnlu"
-PlayerManager="*uid://ckg3u3pkifm83"
-AudioManager="*uid://d2cqrcnofu2a5"
 SettingsManager="*uid://cmkgcjcsgxleu"
+NetworkManager="*uid://ben18rr1i5kcg"
+PlayerManager="*uid://ckg3u3pkifm83"
+GameRegistry="*uid://cc623x8nvjpp1"
+GameLoader="*uid://cn20huschtnlu"
+SceneManager="*uid://dbxhjee0rf2yl"
+AudioManager="*uid://d2cqrcnofu2a5"
 ThemeManager="*uid://goknlo3j8dri"
+GameManager="*uid://c01hklck07bey"
+Quicktest="*uid://vvykfqus3mum"
+Debugoverlay="*uid://bxo5y8i12i70c"
 
 [display]
 
@@ -32,6 +35,10 @@ window/size/viewport_width=1080
 window/size/viewport_height=2400
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [physics]
 

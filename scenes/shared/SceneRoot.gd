@@ -1,7 +1,7 @@
 extends Control
 
-@onready var current_scene: Control = $CurrentScene
-
+@onready var current_scene_container: Control = $CurrentScene
 
 func _ready() -> void:
-	SceneManager.initialize(current_scene)
+	SceneManager.initialize(current_scene_container)
+	SceneManager.change_screen.call_deferred(Screens.MAIN_MENU)

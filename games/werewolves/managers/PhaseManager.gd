@@ -35,34 +35,28 @@ func submit_vote(voter_id: int, voted_for_id: int) -> void:
 	votes[voter_id] = voted_for_id
 
 func end_voting() -> void:
-	# Count votes
 	var vote_counts: Dictionary = {}
 	for voter_id in votes:
 		var voted_for = votes[voter_id]
 		vote_counts[voted_for] = vote_counts.get(voted_for, 0) + 1
-	
+
 	if vote_counts.is_empty():
-		print("No votes cast")
 		return
-	
-	# Find player with most votes
-	var executed_id = vote_counts.keys()[0]
-	var max_votes = vote_counts[executed_id]
-	
+
+	var executed_id: int = -1
+	var max_votes: int = 0
+
 	for player_id in vote_counts:
 		if vote_counts[player_id] > max_votes:
 			executed_id = player_id
 			max_votes = vote_counts[player_id]
-	
-	# Execute player
+
+	if executed_id == -1:
+		return # nobody got any votes
+
 	var executed = match_manager.get_player_state(executed_id)
 	executed.alive = false
 	executed.role_revealed = true
-	
-	print("%s was voted out! They were a %s." % [executed.player.name, executed.role.display_name])
-	
-	match_manager.current_phase = "execution"
-	phase_ended.emit("voting")
 
 func check_and_advance() -> void:
 	var result = match_manager.check_win()

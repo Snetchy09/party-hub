@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://c14u7bfd5bcaf"]
+
+[ext_resource type="Script" uid="uid://dc5b8epgpbygk" path="res://scenes/lobby/HostLobby.gd" id="1_dlwc0"]
+[ext_resource type="PackedScene" uid="uid://c5777xg3l863d" path="res://core/ui/background/BackgroundScene.tscn" id="2_u7omk"]
+[ext_resource type="PackedScene" uid="uid://cg23iyopfayqs" path="res://core/ui/components/PHButton.tscn" id="3_l1757"]
+
+[node name="HostLobby" type="Control" unique_id=1188349076]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dlwc0")
+
+[node name="BackgroundScene" parent="." unique_id=287997469 instance=ExtResource("2_u7omk")]
+layout_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1991096358]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1332342154]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=553756992]
+layout_mode = 2
+text = "Room Created"
+
+[node name="IPPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1065697229]
+layout_mode = 2
+
+[node name="IPLabel" type="Label" parent="MarginContainer/VBoxContainer/IPPanel" unique_id=147650233]
+layout_mode = 2
+text = "IP : . . ."
+
+[node name="PlayerCountLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1756713578]
+layout_mode = 2
+text = "Players: 0/20"
+
+[node name="PlayerListContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2117481341]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=152146250]
+layout_mode = 2
+
+[node name="ModelLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1642698457]
+layout_mode = 2
+text = "Role Pack:"
+
+[node name="ModeOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=283681381]
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "Basic"
+popup/item_0/id = 0
+popup/item_1/text = "Advanced"
+popup/item_1/id = 1
+popup/item_2/text = "Custom"
+popup/item_2/id = 2
+
+[node name="StartButton" parent="MarginContainer/VBoxContainer" unique_id=608303543 instance=ExtResource("3_l1757")]
+layout_mode = 2
+text = "Start Game"
+
+[node name="BackButton" parent="MarginContainer/VBoxContainer" unique_id=1690377767 instance=ExtResource("3_l1757")]
+layout_mode = 2
+text = "Cancel"

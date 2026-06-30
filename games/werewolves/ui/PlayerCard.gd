@@ -34,7 +34,9 @@ func update_from_state(card_data: Dictionary) -> void:
 		modulate = Color.WHITE
 	
 	# Status icons
-	status_container.clear()
+	for child in status_container.get_children():
+		child.queue_free()
+
 	for status_key in card_data["statuses"]:
 		if card_data["statuses"][status_key]:
 			var icon = Label.new()

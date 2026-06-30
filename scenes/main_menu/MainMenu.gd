@@ -1,24 +1,19 @@
 extends BaseScreen
 
-
-@onready var create_room_button: Button = %CreateRoomButton
-@onready var join_room_button: Button = %JoinRoomButton
-@onready var settings_button: Button = %SettingsButton
-
+@onready var create_button: Button = $UILayer/SafeArea/VBoxContainer/Buttons/CreateRoomButton
+@onready var join_button: Button = $UILayer/SafeArea/VBoxContainer/Buttons/JoinRoomButton
+@onready var settings_button: Button = $UILayer/SafeArea/VBoxContainer/Buttons/SettingsButton
 
 func _ready() -> void:
-	create_room_button.pressed.connect(_on_create_room_pressed)
-	join_room_button.pressed.connect(_on_join_room_pressed)
+	create_button.pressed.connect(_on_create_pressed)
+	join_button.pressed.connect(_on_join_pressed)
 	settings_button.pressed.connect(_on_settings_pressed)
 
+func _on_create_pressed() -> void:
+	SceneManager.change_screen(Screens.HOST_LOBBY)
 
-func _on_create_room_pressed() -> void:
-	print("Create Room")
-
-
-func _on_join_room_pressed() -> void:
-	print("Join Room")
-
+func _on_join_pressed() -> void:
+	SceneManager.change_screen(Screens.JOIN_LOBBY)
 
 func _on_settings_pressed() -> void:
-	print("Settings")
+	SceneManager.change_screen(Screens.SETTINGS)

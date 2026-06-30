@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bbrfjdtfmaeoq"]
+
+[node name="WerewolvesGame" type="Control" unique_id=1862672300]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="." unique_id=70668375]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "werewolves game !!!!"

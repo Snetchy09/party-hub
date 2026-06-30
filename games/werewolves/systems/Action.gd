@@ -1,6 +1,5 @@
-# games/werewolves/systems/Action.gd
 class_name Action
-extends Node
+extends RefCounted
 
 var actor: WWPlayerState
 var target: WWPlayerState

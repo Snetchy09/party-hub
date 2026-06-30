@@ -1,11 +1,11 @@
 class_name RoleManager
-extends Node
+extends RefCounted
 
 const ROLES_PATH := "res://games/werewolves/data/roles.json"
 
 var database := RoleDatabase.new()
 
-func _ready() -> void:
+func _init() -> void:
 	load_roles()
 
 func load_roles() -> void:
