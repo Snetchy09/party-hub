@@ -38,3 +38,9 @@ func from_dict(d: Dictionary) -> void:
 	tags.clear()
 	for t in tag_array:
 		tags.append(String(t))
+
+func get_localized_name() -> String:
+	return tr("ROLE_%s_NAME" % id.to_upper())
+
+func get_localized_description() -> String:
+	return tr("ROLE_%s_DESC" % id.to_upper())

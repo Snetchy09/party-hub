@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c07hcgc2qnkf7"]
+
+[ext_resource type="Script" uid="uid://7tww3lrjxwv2" path="res://games/werewolves/ui/PlayerGridUI.gd" id="1_wq2dr"]
+
+[node name="PlayerGridUi" type="Control" unique_id=1444686957]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wq2dr")

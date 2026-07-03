@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dnricb6104brs"]
+
+[ext_resource type="Script" uid="uid://ctonri1sj644f" path="res://games/werewolves/ui/RoleRevealScreen.gd" id="1_p3mao"]
+[ext_resource type="PackedScene" uid="uid://df8v0w5q05g88" path="res://core/ui/components/AvatarDisplay.tscn" id="2_l35pe"]
+
+[node name="RoleRevealScreen" type="Control" unique_id=36505032]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p3mao")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=182815328]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardPanel" type="PanelContainer" parent="CenterContainer" unique_id=951105783]
+custom_minimum_size = Vector2(420, 600)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/CardPanel" unique_id=1278075111]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/CardPanel/MarginContainer" unique_id=1400847592]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="AvatarWrapper" type="Control" parent="CenterContainer/CardPanel/MarginContainer/VBox" unique_id=343910407]
+custom_minimum_size = Vector2(200, 220)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Avatar" parent="CenterContainer/CardPanel/MarginContainer/VBox/AvatarWrapper" unique_id=303937310 instance=ExtResource("2_l35pe")]
+layout_mode = 0
+
+[node name="NameLabel" type="Label" parent="CenterContainer/CardPanel/MarginContainer/VBox" unique_id=1028744385]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoleLabel" type="Label" parent="CenterContainer/CardPanel/MarginContainer/VBox" unique_id=261131071]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescLabel" type="Label" parent="CenterContainer/CardPanel/MarginContainer/VBox" unique_id=998283187]
+visible = false
+custom_minimum_size = Vector2(70, 20)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

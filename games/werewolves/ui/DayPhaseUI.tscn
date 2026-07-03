@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bfoxmjef16558"]
+
+[ext_resource type="Script" uid="uid://cqnte2ax4lk4c" path="res://games/werewolves/ui/DayPhaseUI.gd" id="1_f363l"]
+[ext_resource type="PackedScene" uid="uid://c07hcgc2qnkf7" path="res://games/werewolves/ui/PlayerGridUI.tscn" id="2_g1k5t"]
+
+[node name="DayPhaseUi" type="Control" unique_id=495473523]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f363l")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=364042458]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer" unique_id=942735065]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PhaseTitleLabel" type="Label" parent="MarginContainer/VBox" unique_id=933264147]
+layout_mode = 2
+
+[node name="TimerLabel" type="Label" parent="MarginContainer/VBox" unique_id=939052991]
+layout_mode = 2
+
+[node name="PlayerGrid" parent="MarginContainer/VBox" unique_id=1444686957 instance=ExtResource("2_g1k5t")]
+layout_mode = 2
+
+[node name="VoteCountLabel" type="Label" parent="MarginContainer/VBox" unique_id=329006483]
+layout_mode = 2
+
+[node name="SpecialActionsRow" type="HBoxContainer" parent="MarginContainer/VBox" unique_id=1965635840]
+layout_mode = 2

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ddyax8hkvnbyk"]
+
+[ext_resource type="Script" uid="uid://dtry5oheyp8g5" path="res://games/werewolves/ui/NightPhaseUI.gd" id="1_kyoe4"]
+[ext_resource type="PackedScene" uid="uid://c07hcgc2qnkf7" path="res://games/werewolves/ui/PlayerGridUI.tscn" id="2_raxym"]
+[ext_resource type="PackedScene" uid="uid://bscyvtk7gkvkk" path="res://games/werewolves/ui/SecretChatPanel.tscn" id="3_8p20i"]
+
+[node name="NightPhaseUi" type="Control" unique_id=417868879]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kyoe4")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=86089778]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer" unique_id=178164453]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="RoleReminderLabel" type="Label" parent="MarginContainer/VBox" unique_id=9965407]
+layout_mode = 2
+text = "Your Role:"
+
+[node name="InstructionLabel" type="Label" parent="MarginContainer/VBox" unique_id=985944130]
+layout_mode = 2
+text = "Choose Who To"
+
+[node name="TimerLabel" type="Label" parent="MarginContainer/VBox" unique_id=1731669860]
+layout_mode = 2
+
+[node name="PlayerGrid" parent="MarginContainer/VBox" unique_id=1444686957 instance=ExtResource("2_raxym")]
+layout_mode = 2
+
+[node name="SecretChatPanel" parent="MarginContainer/VBox" unique_id=484146503 instance=ExtResource("3_8p20i")]
+layout_mode = 2
+
+[node name="SleepingLabel" type="Label" parent="MarginContainer/VBox" unique_id=1031280140]
+visible = false
+layout_mode = 2
+text = " the village sleeps . . ."

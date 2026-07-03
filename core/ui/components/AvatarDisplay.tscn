@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://df8v0w5q05g88"]
+
+[ext_resource type="Script" uid="uid://ce60r0wwxfe2u" path="res://core/ui/components/AvatarDisplay.gd" id="1_t31vr"]
+
+[node name="AvatarDisplay" type="Control" unique_id=303937310]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_t31vr")
+
+[node name="Body" type="TextureRect" parent="." unique_id=121577762]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Clothes" type="TextureRect" parent="." unique_id=939787138]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="HairBack" type="TextureRect" parent="." unique_id=360465403]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Eyes" type="TextureRect" parent="." unique_id=2030182399]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Mouth" type="TextureRect" parent="." unique_id=2014688581]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="HairFront" type="TextureRect" parent="." unique_id=2028673214]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1

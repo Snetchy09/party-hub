@@ -20,3 +20,5 @@ var max_players: int = 20
 @export var icon: Texture2D
 
 @export var main_scene: PackedScene
+
+@export var settings_scene: PackedScene

@@ -22,7 +22,8 @@ func _ready() -> void:
 	NetworkManager.message_received.connect(_on_message_received)
 
 	PlayerManager.reset()
-	PlayerManager.add_player(1, SettingsManager.player_name, true)  # host is always peer 1
+	PlayerManager.add_player(1, SettingsManager.player_name, true)
+	PlayerManager.get_player(1).avatar_data = SettingsManager.avatar_data  # host is always peer 1
 
 	start_button.pressed.connect(_on_start_pressed)
 	back_button.pressed.connect(_on_back_pressed)
@@ -42,6 +43,12 @@ func _on_message_received(sender_id: int, message: Dictionary) -> void:
 	if message.get("type", "") == MessageTypes.PLAYER_HELLO:
 		var player_name: String = message.get("name", "Player")
 		PlayerManager.add_player(sender_id, player_name, false)
+
+		if message.has("avatar_data"):
+			var ad := AvatarData.new()
+			ad.from_dict(message["avatar_data"])
+			PlayerManager.get_player(sender_id).avatar_data = ad
+
 		_refresh_player_list()
 		_broadcast_lobby_state()
 

@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://pctojjy2yiws"]
+
+[ext_resource type="Script" uid="uid://2ghdmpsp5s3p" path="res://scenes/settings/SettingsScreen.gd" id="1_b5wgx"]
+[ext_resource type="PackedScene" uid="uid://c5777xg3l863d" path="res://core/ui/background/BackgroundScene.tscn" id="2_d661i"]
+[ext_resource type="PackedScene" uid="uid://cg23iyopfayqs" path="res://core/ui/components/PHButton.tscn" id="3_20is4"]
+
+[node name="SettingsScreen" type="Control" unique_id=2103191902]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b5wgx")
+
+[node name="BackgroundScene" parent="." unique_id=287997469 instance=ExtResource("2_d661i")]
+visible = false
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1877444014]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer" unique_id=129918532]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBox" unique_id=426663580]
+layout_mode = 2
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBox" unique_id=1536573701]
+layout_mode = 2
+text = "Your Username:"
+
+[node name="NameInput" type="LineEdit" parent="MarginContainer/VBox" unique_id=1822621641]
+layout_mode = 2
+
+[node name="LanguageLabel" type="Label" parent="MarginContainer/VBox" unique_id=1497287263]
+layout_mode = 2
+text = "Language:"
+
+[node name="LanguageOption" type="OptionButton" parent="MarginContainer/VBox" unique_id=116232416]
+layout_mode = 2
+
+[node name="BackButton" parent="MarginContainer/VBox" unique_id=608303543 instance=ExtResource("3_20is4")]
+layout_mode = 2
+text = "Back"

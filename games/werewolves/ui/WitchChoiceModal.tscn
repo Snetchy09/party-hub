@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c70pgagy2g1ox"]
+
+[ext_resource type="Script" uid="uid://bv638kj6paewd" path="res://games/werewolves/ui/WitchChoiceModal.gd" id="1_bld3k"]
+[ext_resource type="PackedScene" uid="uid://cg23iyopfayqs" path="res://core/ui/components/PHButton.tscn" id="2_ecqm6"]
+
+[node name="WitchChoiceModal" type="Control" unique_id=1532864059]
+modulate = Color(0.44705883, 0, 0.27058825, 1)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bld3k")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=1177603793]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6666667)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1657742470]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="CenterContainer" unique_id=2140193356]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Panel" unique_id=1140105923]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel/MarginContainer" unique_id=1028452057]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=1445118413]
+layout_mode = 2
+text = "Choose Your Path"
+
+[node name="DescLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=1499531146]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+text = "Be a White Witch and Help The village or Be a Black witch and Win"
+autowrap_mode = 1
+
+[node name="WhiteButton" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=608303543 instance=ExtResource("2_ecqm6")]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+text = "White 	Witch"
+
+[node name="BlackButton" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=810926804 instance=ExtResource("2_ecqm6")]
+layout_mode = 2
+text = "Black Witch"

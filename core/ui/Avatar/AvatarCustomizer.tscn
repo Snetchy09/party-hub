@@ -1,0 +1,186 @@
+[gd_scene format=3 uid="uid://13fxdafbgmrq"]
+
+[ext_resource type="Script" uid="uid://spjypj688pr3" path="res://core/ui/Avatar/AvatarCustomizer.gd" id="1_uiftk"]
+[ext_resource type="PackedScene" uid="uid://df8v0w5q05g88" path="res://core/ui/components/AvatarDisplay.tscn" id="2_mxnwg"]
+[ext_resource type="PackedScene" uid="uid://cg23iyopfayqs" path="res://core/ui/components/PHButton.tscn" id="3_wtw53"]
+
+[node name="AvatarCustomizer" type="Control" unique_id=606181144]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uiftk")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=1116861039]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.74439543, 0.7027117, 0.29411766)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1199154056]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="CenterContainer" unique_id=1590197263]
+custom_minimum_size = Vector2(820, 1020)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Panel" unique_id=892710957]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel/MarginContainer" unique_id=1211205103]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=1717856805]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Costumize Your Avatar!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PreviewWrapper" type="CenterContainer" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=795665894]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+
+[node name="Preview" parent="CenterContainer/Panel/MarginContainer/VBox/PreviewWrapper" unique_id=303937310 instance=ExtResource("2_mxnwg")]
+custom_minimum_size = Vector2(300, 400)
+layout_mode = 2
+
+[node name="HairRow" type="HBoxContainer" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=314915777]
+layout_mode = 2
+
+[node name="RowLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox/HairRow" unique_id=852622112]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Hair Style:"
+
+[node name="PrevButton" type="Button" parent="CenterContainer/Panel/MarginContainer/VBox/HairRow" unique_id=1162131986]
+layout_mode = 2
+text = "◀"
+
+[node name="ValueLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox/HairRow" unique_id=1454328725]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+text = "Short"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="CenterContainer/Panel/MarginContainer/VBox/HairRow" unique_id=189878235]
+layout_mode = 2
+text = "▶"
+
+[node name="HairColorRow" type="HBoxContainer" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=118157803]
+layout_mode = 2
+
+[node name="RowLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox/HairColorRow" unique_id=1421888343]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Hair Color:"
+
+[node name="HairColorPicker" type="ColorPickerButton" parent="CenterContainer/Panel/MarginContainer/VBox/HairColorRow" unique_id=1303712231]
+layout_mode = 2
+text = "....................................................................................................................................................."
+
+[node name="EyesRow" type="HBoxContainer" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=1537675878]
+layout_mode = 2
+
+[node name="RowLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox/EyesRow" unique_id=7984673]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "      EYES    :"
+
+[node name="PrevButton" type="Button" parent="CenterContainer/Panel/MarginContainer/VBox/EyesRow" unique_id=583293229]
+layout_mode = 2
+text = "◀"
+
+[node name="ValueLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox/EyesRow" unique_id=1204309786]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="CenterContainer/Panel/MarginContainer/VBox/EyesRow" unique_id=617262503]
+layout_mode = 2
+text = "▶"
+
+[node name="MouthRow" type="HBoxContainer" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=261807125]
+layout_mode = 2
+
+[node name="RowLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox/MouthRow" unique_id=871370677]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "   Mouth   :"
+
+[node name="PrevButton" type="Button" parent="CenterContainer/Panel/MarginContainer/VBox/MouthRow" unique_id=802160151]
+layout_mode = 2
+text = "◀"
+
+[node name="ValueLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox/MouthRow" unique_id=1840474094]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="CenterContainer/Panel/MarginContainer/VBox/MouthRow" unique_id=979208735]
+layout_mode = 2
+text = "▶"
+
+[node name="ClothesRow" type="HBoxContainer" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=1035258202]
+layout_mode = 2
+
+[node name="RowLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox/ClothesRow" unique_id=1668035871]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "  Clothes   :"
+
+[node name="PrevButton" type="Button" parent="CenterContainer/Panel/MarginContainer/VBox/ClothesRow" unique_id=39961380]
+layout_mode = 2
+text = "◀"
+
+[node name="ValueLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox/ClothesRow" unique_id=704038419]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="CenterContainer/Panel/MarginContainer/VBox/ClothesRow" unique_id=678854714]
+layout_mode = 2
+text = "▶"
+
+[node name="SkinToneRow" type="HBoxContainer" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=1402501178]
+layout_mode = 2
+
+[node name="RowLabel" type="Label" parent="CenterContainer/Panel/MarginContainer/VBox/SkinToneRow" unique_id=746265577]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Skin Tone :"
+
+[node name="SkinColorPicker" type="ColorPickerButton" parent="CenterContainer/Panel/MarginContainer/VBox/SkinToneRow" unique_id=1034910581]
+layout_mode = 2
+text = "....................................................................................................................................................."
+
+[node name="DoneButton" parent="CenterContainer/Panel/MarginContainer/VBox" unique_id=608303543 instance=ExtResource("3_wtw53")]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Done"
+icon_alignment = 1
+vertical_icon_alignment = 2

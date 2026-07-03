@@ -36,6 +36,7 @@ func _on_connected() -> void:
 	NetworkManager.send_to_host({
 		"type": MessageTypes.PLAYER_HELLO,
 		"name": SettingsManager.player_name,
+		"avatar_data": SettingsManager.avatar_data.to_dict(),
 	})
 
 func _on_failed() -> void:

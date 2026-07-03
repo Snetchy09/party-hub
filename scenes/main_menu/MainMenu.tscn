@@ -6,52 +6,66 @@
 
 [node name="MainMenu" type="Control" unique_id=1573768771]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_isws5")
 
 [node name="Background" parent="." unique_id=287997469 instance=ExtResource("2_xr86y")]
 layout_mode = 0
-
-[node name="WorldLayer" type="Control" parent="." unique_id=1329394081]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="UILayer" type="CanvasLayer" parent="." unique_id=2064853817]
-
-[node name="SafeArea" type="MarginContainer" parent="UILayer" unique_id=144277503]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UILayer/SafeArea" unique_id=1365717096]
-layout_mode = 2
-
-[node name="Logo" type="Label" parent="UILayer/SafeArea/VBoxContainer" unique_id=1414152752]
-layout_mode = 2
-text = "PARTY HUB"
-
-[node name="Buttons" type="VBoxContainer" parent="UILayer/SafeArea/VBoxContainer" unique_id=242339787]
-layout_mode = 2
-
-[node name="CreateRoomButton" parent="UILayer/SafeArea/VBoxContainer/Buttons" unique_id=608303543 instance=ExtResource("2_axelx")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Create Room"
-
-[node name="JoinRoomButton" parent="UILayer/SafeArea/VBoxContainer/Buttons" unique_id=1552337185 instance=ExtResource("2_axelx")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Join Room"
-
-[node name="SettingsButton" parent="UILayer/SafeArea/VBoxContainer/Buttons" unique_id=1700885980 instance=ExtResource("2_axelx")]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Settings"
-
-[node name="Footer" type="Label" parent="UILayer/SafeArea/VBoxContainer" unique_id=762240161]
-layout_mode = 2
-text = "Version 0.1"
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="PopupLayer" type="CanvasLayer" parent="." unique_id=1448153718]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=573478069]
+
+[node name="SafeArea" type="MarginContainer" parent="." unique_id=144277503]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SafeArea" unique_id=1365717096]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Logo" type="Label" parent="SafeArea/VBoxContainer" unique_id=1414152752]
+layout_mode = 2
+text = "PARTY HUB"
+
+[node name="Buttons" type="VBoxContainer" parent="SafeArea/VBoxContainer" unique_id=242339787]
+layout_mode = 2
+
+[node name="CreateRoomButton" parent="SafeArea/VBoxContainer/Buttons" unique_id=608303543 instance=ExtResource("2_axelx")]
+unique_name_in_owner = true
+auto_translate_mode = 1
+layout_mode = 2
+tooltip_auto_translate_mode = 1
+text = "MENU_CREATE_ROOM"
+
+[node name="JoinRoomButton" parent="SafeArea/VBoxContainer/Buttons" unique_id=1552337185 instance=ExtResource("2_axelx")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "MENU_JOIN_ROOM"
+
+[node name="SettingsButton" parent="SafeArea/VBoxContainer/Buttons" unique_id=1700885980 instance=ExtResource("2_axelx")]
+unique_name_in_owner = true
+layout_mode = 2
+text = "MENU_SETTINGS"
+
+[node name="EditAvatarButton" parent="SafeArea/VBoxContainer/Buttons" unique_id=2036803098 instance=ExtResource("2_axelx")]
+layout_mode = 2
+text = "Edit Avatar"
+
+[node name="Footer" type="Label" parent="SafeArea/VBoxContainer" unique_id=762240161]
+layout_mode = 2
+text = "Version 0.1"

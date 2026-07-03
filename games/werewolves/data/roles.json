@@ -1,72 +1,141 @@
 [
-	{
-		"id": "villager",
-		"display_name": "Villager",
-		"description": "An ordinary villager with no special ability.",
-		"team": "village",
-		"power": 1,
-		"rarity": 1,
-		"unique": false,
-		"min_players": 1,
-		"appears_good": true,
-		"appears_bad": false,
-		"can_act_at_night": false,
-		"tags": ["basic"]
-	},
-	{
-		"id": "werewolf",
-		"display_name": "Werewolf",
-		"description": "Works with the other werewolves to eliminate the village.",
-		"team": "werewolves",
-		"power": 5,
-		"rarity": 1,
-		"unique": false,
-		"min_players": 5,
-		"appears_good": false,
-		"appears_bad": true,
-		"can_act_at_night": true,
-		"tags": ["killer"]
-	},
-	{
-		"id": "doctor",
-		"display_name": "Doctor",
-		"description": "Protects one player each night.",
-		"team": "village",
-		"power": 4,
-		"rarity": 2,
-		"unique": true,
-		"min_players": 6,
-		"appears_good": true,
-		"appears_bad": false,
-		"can_act_at_night": true,
-		"tags": ["protector"]
-	},
-	{
-		"id": "blue_seer",
-		"display_name": "Blue Seer",
-		"description": "Investigates one player each night.",
-		"team": "village",
-		"power": 4,
-		"rarity": 2,
-		"unique": true,
-		"min_players": 7,
-		"appears_good": true,
-		"appears_bad": false,
-		"can_act_at_night": true,
-		"tags": ["investigator"]
-	},
-	{
-		"id": "lone_wolf",
-		"display_name": "Lone Wolf",
-		"description": "Becomes stronger after every other werewolf dies.",
-		"team": "werewolves",
-		"power": 6,
-		"rarity": 3,
-		"unique": true,
-		"min_players": 8,
-		"appears_good": false,
-		"appears_bad": true,
-		"can_act_at_night": true,
-		"tags": ["killer", "late_game"]
-	}
+  {
+	"id": "villager",
+	"display_name": "Villager",
+	"description": "An ordinary villager with no special power. Vote wisely.",
+	"team": "village",
+	"appears_as": "good",
+	"power": 1, "rarity": 1, "unique": false, "min_players": 4,
+	"can_act_at_night": false, "can_act_at_day": false,
+	"night_uses": -1, "tags": ["basic"], "icon": "villager"
+  },
+  {
+	"id": "werewolf",
+	"display_name": "Werewolf",
+	"description": "Hunt and eliminate the village under cover of darkness.",
+	"team": "werewolves",
+	"appears_as": "bad",
+	"power": 5, "rarity": 1, "unique": false, "min_players": 5,
+	"can_act_at_night": true, "night_action": "kill",
+	"night_uses": -1, "tags": ["killer"], "icon": "werewolf"
+  },
+  {
+	"id": "witch",
+	"display_name": "Witch",
+	"description": "At the start of the game, choose your path: White or Black.",
+	"team": "village_or_werewolves",
+	"appears_as": "bad",
+	"power": 4, "rarity": 2, "unique": false, "min_players": 6,
+	"can_act_at_night": true, "night_action": "witch_action",
+	"night_uses": -1, "tags": ["special", "choice"], "icon": "witch"
+  },
+  {
+	"id": "aura_seer",
+	"display_name": "Aura Seer",
+	"description": "Each night, sense the true nature of one player's soul.",
+	"team": "village",
+	"appears_as": "good",
+	"power": 4, "rarity": 2, "unique": true, "min_players": 6,
+	"can_act_at_night": true, "night_action": "investigate",
+	"night_uses": -1, "tags": ["investigator"], "icon": "aura_seer"
+  },
+  {
+	"id": "bloody_seer",
+	"display_name": "Bloody Seer",
+	"description": "Sacrifice a villager to expose a hidden evil.",
+	"team": "village",
+	"appears_as": "unknown",
+	"power": 5, "rarity": 3, "unique": true, "min_players": 8,
+	"can_act_at_night": true, "night_action": "sacrifice",
+	"night_uses": 1, "tags": ["investigator", "rare"], "icon": "bloody_seer"
+  },
+  {
+	"id": "judge",
+	"display_name": "Judge",
+	"description": "Command the village: skip a vote, or free an imprisoned soul. Once each.",
+	"team": "village",
+	"appears_as": "good",
+	"power": 3, "rarity": 2, "unique": true, "min_players": 6,
+	"can_act_at_day": true, "night_uses": 0,
+	"tags": ["special"], "icon": "judge"
+  },
+  {
+	"id": "jailer",
+	"display_name": "Jailer",
+	"description": "Imprison a suspect each night. Speak with them in secret. Execute once.",
+	"team": "village",
+	"appears_as": "unknown",
+	"power": 4, "rarity": 2, "unique": true, "min_players": 6,
+	"can_act_at_night": true, "can_act_at_day": true,
+	"night_action": "jail_chat", "day_action": "choose_jail_target",
+	"night_uses": 1, "tags": ["special"], "icon": "jailer"
+  },
+  {
+	"id": "mirror",
+	"display_name": "The Mirror",
+	"description": "Reflect the darkness back upon its source. Twice.",
+	"team": "village",
+	"appears_as": "unknown",
+	"power": 5, "rarity": 2, "unique": true, "min_players": 7,
+	"can_act_at_night": true, "night_action": "reflect",
+	"night_uses": 2, "tags": ["special", "counter"], "icon": "mirror"
+  },
+  {
+	"id": "medium",
+	"display_name": "Medium",
+	"description": "Speak with the departed. Once, call one back from death.",
+	"team": "village",
+	"appears_as": "good",
+	"power": 4, "rarity": 2, "unique": true, "min_players": 6,
+	"can_act_at_night": true, "night_action": "revive",
+	"night_uses": 1, "tags": ["special", "reviver"], "icon": "medium"
+  },
+  {
+	"id": "streets_lady",
+	"display_name": "Streets Lady",
+	"description": "Visit someone each night. Your death reveals the truth.",
+	"team": "village",
+	"appears_as": "good",
+	"power": 2, "rarity": 2, "unique": true, "min_players": 6,
+	"can_act_at_night": true, "night_action": "visit",
+	"night_uses": -1, "tags": ["investigator", "passive"], "icon": "streets_lady"
+  },
+  {
+	"id": "hacker",
+	"display_name": "Hacker",
+	"description": "Infiltrate a target. Control their vote. Use their powers.",
+	"team": "solo",
+	"appears_as": "unknown",
+	"power": 6, "rarity": 3, "unique": true, "min_players": 8,
+	"can_act_at_night": true, "night_action": "use_hacked_ability",
+	"can_act_at_day": true, "day_action": "redirect_vote",
+	"night_uses": -1, "tags": ["solo", "special", "rare"], "icon": "hacker"
+  },
+  {
+	"id": "jester",
+	"display_name": "Jester",
+	"description": "Trick them into voting you out. Then laugh last.",
+	"team": "solo",
+	"appears_as": "unknown",
+	"power": 2, "rarity": 2, "unique": true, "min_players": 6,
+	"can_act_at_night": false, "tags": ["solo"], "icon": "jester"
+  },
+  {
+	"id": "hunter",
+	"display_name": "Hunter",
+	"description": "You have one target. Get the village to vote them out.",
+	"team": "solo",
+	"appears_as": "unknown",
+	"power": 3, "rarity": 2, "unique": true, "min_players": 7,
+	"can_act_at_night": false, "tags": ["solo"], "icon": "hunter"
+  },
+  {
+	"id": "investigator",
+	"display_name": "Investigator",
+	"description": "Watch three suspects. The numbers will tell you who strikes in the night.",
+	"team": "village",
+	"appears_as": "good",
+	"power": 4, "rarity": 2, "unique": true, "min_players": 7,
+	"can_act_at_night": false, "tags": ["investigator"], "icon": "investigator"
+  }
 ]

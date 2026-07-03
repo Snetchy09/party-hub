@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d3eh16psyuv4m"]
+
+[ext_resource type="Script" uid="uid://0wr0y84w8gtl" path="res://games/werewolves/ui/WinScreen.gd" id="1_lrcmn"]
+[ext_resource type="FontFile" uid="uid://kcx2whme2jfr" path="res://assets/fonts/MedievalSharp-Regular.ttf" id="2_2kayr"]
+[ext_resource type="PackedScene" uid="uid://c07hcgc2qnkf7" path="res://games/werewolves/ui/PlayerGridUI.tscn" id="3_qlugo"]
+[ext_resource type="PackedScene" uid="uid://cg23iyopfayqs" path="res://core/ui/components/PHButton.tscn" id="4_571tn"]
+
+[node name="WinScreen" type="Control" unique_id=1714827651]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lrcmn")
+
+[node name="DimBackground" type="ColorRect" parent="." unique_id=54621479]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.61960787)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=270770299]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer" unique_id=718879930]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="WinnerLabel" type="Label" parent="CenterContainer/VBox" unique_id=1220741060]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_2kayr")
+theme_override_font_sizes/font_size = 40
+text = "Villagers Win !"
+
+[node name="ReasonLabel" type="Label" parent="CenterContainer/VBox" unique_id=98132921]
+layout_mode = 2
+
+[node name="AllRolesGrid" parent="CenterContainer/VBox" unique_id=1444686957 instance=ExtResource("3_qlugo")]
+layout_mode = 2
+
+[node name="PlayAgainButton" parent="CenterContainer/VBox" unique_id=608303543 instance=ExtResource("4_571tn")]
+layout_mode = 2
+text = "Play Again"
+
+[node name="MenuButton" parent="CenterContainer/VBox" unique_id=562906715 instance=ExtResource("4_571tn")]
+layout_mode = 2
+text = "Back To Menu"

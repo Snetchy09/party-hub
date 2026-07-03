@@ -6,26 +6,26 @@
 
 [node name="JoinLobby" type="Control" unique_id=1835003569]
 layout_mode = 3
-anchors_preset = 0
-offset_left = -14.0
-offset_top = 16.0
-offset_right = -14.0
-offset_bottom = 16.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_ubcwk")
 
 [node name="BackgroundScene" parent="." unique_id=287997469 instance=ExtResource("2_drsb4")]
-layout_mode = 0
-scale = Vector2(1.0355488, 3.8844936)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1428572456]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 490.0
-offset_top = 752.0
-offset_right = 671.0
-offset_bottom = 1138.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 40
@@ -41,7 +41,7 @@ theme_override_constants/separation = 20
 layout_mode = 2
 text = "Join a Game !"
 
-[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=887551451]
+[node name="IPInput" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=887551451]
 layout_mode = 2
 placeholder_text = "Enter Host IP"
 

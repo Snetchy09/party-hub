@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b1vhk8chhw7p7"]
+
+[ext_resource type="Script" uid="uid://dy3wpi83ujqu1" path="res://games/werewolves/ui/GameScreen.gd" id="1_dnvjj"]
+[ext_resource type="PackedScene" uid="uid://c5777xg3l863d" path="res://core/ui/background/BackgroundScene.tscn" id="2_gu5mh"]
+[ext_resource type="FontFile" uid="uid://kcx2whme2jfr" path="res://assets/fonts/MedievalSharp-Regular.ttf" id="3_33c20"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4kxuq"]
+font = ExtResource("3_33c20")
+font_size = 67
+font_color = Color(0, 0, 0, 1)
+
+[node name="GameScreen" type="Control" unique_id=2031602381]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dnvjj")
+
+[node name="BackgroundScene" parent="." unique_id=287997469 instance=ExtResource("2_gu5mh")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NightOverlay" type="ColorRect" parent="." unique_id=670954739]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.13725491, 0.49411765, 1)
+
+[node name="PhaseLabel" type="Label" parent="." unique_id=30874469]
+layout_mode = 0
+offset_left = 90.0
+offset_right = 770.0
+offset_bottom = 214.0
+label_settings = SubResource("LabelSettings_4kxuq")
+
+[node name="ContentContainer" type="Control" parent="." unique_id=762027901]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnnouncementOverlay" type="Control" parent="." unique_id=692713080]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

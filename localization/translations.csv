@@ -1,0 +1,71 @@
+keys,en,ar,fr
+APP_TITLE,Party Hub,بارتي هاب,Party Hub
+MENU_CREATE_ROOM,Create Room,إنشاء غرفة,Créer une salle
+MENU_JOIN_ROOM,Join Room,انضم لغرفة,Rejoindre une salle
+MENU_SETTINGS,Settings,الإعدادات,Paramètres
+LOBBY_ROOM_CREATED,Room Created,تم إنشاء الغرفة,Salle créée
+LOBBY_IP_LABEL,IP: {ip}   Port: {port},العنوان: {ip}   المنفذ: {port},IP : {ip}   Port : {port}
+LOBBY_PLAYERS_COUNT,Players: {count}/20,اللاعبون: {count}/20,Joueurs : {count}/20
+LOBBY_START_GAME,Start Game,ابدأ اللعبة,Démarrer la partie
+LOBBY_CANCEL,Cancel,إلغاء,Annuler
+LOBBY_JOIN_TITLE,Join a Game,انضم إلى لعبة,Rejoindre une partie
+LOBBY_IP_PLACEHOLDER,Enter host IP,أدخل عنوان المضيف,Entrez l'IP de l'hôte
+LOBBY_CONNECT,Connect,اتصال,Connecter
+LOBBY_CONNECTING,Connecting...,جارٍ الاتصال...,Connexion...
+LOBBY_CONNECTED,Connected! Waiting for host...,تم الاتصال! بانتظار المضيف...,Connecté ! En attente de l'hôte...
+LOBBY_CONNECT_FAILED,Connection failed. Check the IP and try again.,فشل الاتصال. تحقق من العنوان وأعد المحاولة.,Échec de la connexion. Vérifiez l'IP et réessayez.
+LOBBY_BACK,Back,رجوع,Retour
+ROLE_PACK_BASIC,Basic,أساسي,Basique
+ROLE_PACK_ADVANCED,Advanced,متقدم,Avancé
+ROLE_PACK_CUSTOM,Custom,مخصص,Personnalisé
+PHASE_NIGHT_TITLE,🌙 NIGHT FALLS,🌙 يحل الليل,🌙 LA NUIT TOMBE
+PHASE_NIGHT_SUB,The village sleeps...,القرية نائمة...,Le village dort...
+PHASE_MORNING_TITLE,🌅 DAWN BREAKS,🌅 يطلع الفجر,🌅 L'AUBE SE LÈVE
+PHASE_MORNING_SUB,The night's deeds are revealed,تُكشف أحداث الليل,Les événements de la nuit sont révélés
+PHASE_DISCUSSION_TITLE,☀️ DISCUSSION,☀️ النقاش,☀️ DISCUSSION
+PHASE_DISCUSSION_SUB,Deliberate. Decide.,تداولوا. قرروا.,Délibérez. Décidez.
+PHASE_VOTING_TITLE,⚖️ VOTE,⚖️ التصويت,⚖️ VOTE
+PHASE_VOTING_SUB,Cast your judgment,أدلِ بحكمك,Exprimez votre jugement
+PHASE_EXECUTION_TITLE,💀 EXECUTION,💀 الإعدام,💀 EXÉCUTION
+PHASE_EXECUTION_SUB,Justice is served,تحققت العدالة,La justice est rendue
+TAP_TO_REVEAL,◈ TAP TO REVEAL ◈,◈ اضغط للكشف ◈,◈ APPUYEZ POUR RÉVÉLER ◈
+NIGHT_NO_ACTION,🌙 The village sleeps...,🌙 القرية نائمة...,🌙 Le village dort...
+NIGHT_ACTION_SUBMITTED,✓ Action submitted. Waiting for others...,✓ تم إرسال الإجراء. بانتظار الآخرين...,✓ Action envoyée. En attente des autres...
+NO_EXECUTION,No one was executed (tie or no votes).,لم يُعدَم أحد (تعادل أو لا أصوات).,Personne n'a été exécuté (égalité ou aucun vote).
+WIN_VILLAGE,🏘️ VILLAGE WINS!,🏘️ القرية تفوز!,🏘️ LE VILLAGE GAGNE !
+WIN_WEREWOLVES,🐺 WEREWOLVES WIN!,🐺 الذئاب تفوز!,🐺 LES LOUPS-GAROUS GAGNENT !
+WIN_JESTER,🃏 THE JESTER WINS!,🃏 المهرج يفوز!,🃏 LE BOUFFON GAGNE !
+WIN_HUNTER,🏹 THE HUNTER WINS!,🏹 الصياد يفوز!,🏹 LE CHASSEUR GAGNE !
+WIN_PLAY_AGAIN,Play Again,العب مجدداً,Rejouer
+WIN_BACK_MENU,Back to Menu,العودة للقائمة,Retour au menu
+SETTINGS_TITLE,Settings,الإعدادات,Paramètres
+SETTINGS_NAME_LABEL,Your Name:,اسمك:,Votre nom :
+SETTINGS_LANGUAGE_LABEL,Language:,اللغة:,Langue :
+ROLE_VILLAGER_NAME,Villager,قروي,Villageois
+ROLE_VILLAGER_DESC,An ordinary villager with no special power. Vote wisely.,قروي عادي بلا قوة خاصة. صوّت بحكمة.,Un villageois ordinaire sans pouvoir spécial. Votez judicieusement.
+ROLE_WEREWOLF_NAME,Werewolf,مستذئب,Loup-garou
+ROLE_WEREWOLF_DESC,Hunt and eliminate the village under cover of darkness.,اصطد القرية وأقصِها تحت جنح الظلام.,Chassez et éliminez le village sous le couvert de l'obscurité.
+ROLE_WITCH_NAME,Witch,ساحرة,Sorcière
+ROLE_WITCH_DESC,At the start of the game choose your path: White or Black.,اختاري طريقك في بداية اللعبة: بيضاء أو سوداء.,Au début de la partie choisissez votre voie : Blanche ou Noire.
+ROLE_AURA_SEER_NAME,Aura Seer,قارئة الهالة,Voyante d'Aura
+ROLE_AURA_SEER_DESC,Each night sense the true nature of one player's soul.,استشعري كل ليلة طبيعة روح أحد اللاعبين الحقيقية.,Chaque nuit ressentez la vraie nature de l'âme d'un joueur.
+ROLE_BLOODY_SEER_NAME,Bloody Seer,العرّافة الدامية,Voyante Sanglante
+ROLE_BLOODY_SEER_DESC,Sacrifice a villager to expose a hidden evil.,ضحّي بقروي لكشف شر خفي.,Sacrifiez un villageois pour révéler un mal caché.
+ROLE_JUDGE_NAME,Judge,القاضي,Juge
+ROLE_JUDGE_DESC,Command the village: skip a vote or free an imprisoned soul. Once each.,تحكّم بالقرية: تخطَّ تصويتاً أو حرّر سجيناً. مرة واحدة لكل منهما.,Commandez le village : sautez un vote ou libérez un prisonnier. Une fois chacun.
+ROLE_JAILER_NAME,Jailer,السجّان,Geôlier
+ROLE_JAILER_DESC,Imprison a suspect each night. Speak with them in secret. Execute once.,اسجن مشتبهاً به كل ليلة. تحدث معه سراً. أعدم مرة واحدة.,Emprisonnez un suspect chaque nuit. Parlez-lui en secret. Exécutez une fois.
+ROLE_MIRROR_NAME,The Mirror,المرآة,Le Miroir
+ROLE_MIRROR_DESC,Reflect the darkness back upon its source. Twice.,اعكس الظلام على مصدره. مرتين.,Reflétez l'obscurité vers sa source. Deux fois.
+ROLE_MEDIUM_NAME,Medium,الوسيط الروحي,Médium
+ROLE_MEDIUM_DESC,Speak with the departed. Once call one back from death.,تحدث مع الراحلين. أعد واحداً من الموت مرة واحدة.,Parlez avec les défunts. Une fois ramenez quelqu'un de la mort.
+ROLE_STREETS_LADY_NAME,Streets Lady,سيدة الشوارع,Dame des Rues
+ROLE_STREETS_LADY_DESC,Visit someone each night. Your death reveals the truth.,زوري أحداً كل ليلة. موتك يكشف الحقيقة.,Visitez quelqu'un chaque nuit. Votre mort révèle la vérité.
+ROLE_HACKER_NAME,Hacker,المخترق,Hacker
+ROLE_HACKER_DESC,Infiltrate a target. Control their vote. Use their powers.,تسلل لهدف. تحكم بصوته. استخدم قواه.,Infiltrez une cible. Contrôlez son vote. Utilisez ses pouvoirs.
+ROLE_JESTER_NAME,Jester,المهرج,Bouffon
+ROLE_JESTER_DESC,Trick them into voting you out. Then laugh last.,اخدعهم ليصوتوا لإقصائك. ثم اضحك أخيراً.,Piégez-les pour qu'ils vous éliminent. Puis riez le dernier.
+ROLE_HUNTER_NAME,Hunter,الصياد,Chasseur
+ROLE_HUNTER_DESC,You have one target. Get the village to vote them out.,لديك هدف واحد. اجعل القرية تصوّت لإقصائه.,Vous avez une cible. Faites que le village l'élimine.
+ROLE_INVESTIGATOR_NAME,Investigator,المحقق,Enquêteur
+ROLE_INVESTIGATOR_DESC,Watch three suspects. The numbers will tell who strikes at night.,راقب ثلاثة مشتبه بهم. الأرقام ستكشف من يضرب ليلاً.,Surveillez trois suspects. Les chiffres révéleront qui frappe la nuit.
