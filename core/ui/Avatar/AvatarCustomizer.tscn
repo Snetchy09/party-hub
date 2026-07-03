@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://13fxdafbgmrq"]
 
-[ext_resource type="Script" uid="uid://spjypj688pr3" path="res://core/ui/Avatar/AvatarCustomizer.gd" id="1_uiftk"]
+[ext_resource type="Script" uid="uid://spjypj688pr3" path="res://core/ui/avatar/AvatarCustomizer.gd" id="1_uiftk"]
 [ext_resource type="PackedScene" uid="uid://df8v0w5q05g88" path="res://core/ui/components/AvatarDisplay.tscn" id="2_mxnwg"]
 [ext_resource type="PackedScene" uid="uid://cg23iyopfayqs" path="res://core/ui/components/PHButton.tscn" id="3_wtw53"]
 

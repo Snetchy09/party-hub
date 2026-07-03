@@ -13,6 +13,7 @@ var my_role_id: String = ""
 var my_role_display: String = ""
 var my_role_description: String = ""
 var my_team: String = ""
+var _initialized: bool = false
 
 const TEAM_GLOW := {
 	"village": Color(0.4, 0.95, 0.5),
@@ -22,11 +23,12 @@ const TEAM_GLOW := {
 }
 
 func _ready() -> void:
-	card_panel.pivot_offset = card_panel.size / 2.0
 	card_panel.gui_input.connect(_on_card_input)
 	role_label.text = "◈  TAP TO REVEAL  ◈"
 	role_label.modulate = Color(1, 0.85, 0.2)
 	desc_label.hide()
+	await get_tree().process_frame
+	card_panel.pivot_offset = card_panel.size / 2.0
 
 func initialize(state: Dictionary, my_player_id: int) -> void:
 	my_role_id = state.get("my_role", "")

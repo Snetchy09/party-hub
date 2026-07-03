@@ -3,6 +3,7 @@ APP_TITLE,Party Hub,بارتي هاب,Party Hub
 MENU_CREATE_ROOM,Create Room,إنشاء غرفة,Créer une salle
 MENU_JOIN_ROOM,Join Room,انضم لغرفة,Rejoindre une salle
 MENU_SETTINGS,Settings,الإعدادات,Paramètres
+MENU_AVATAR,Edit Avatar,عدل المظهر,Editer l'Avatar
 LOBBY_ROOM_CREATED,Room Created,تم إنشاء الغرفة,Salle créée
 LOBBY_IP_LABEL,IP: {ip}   Port: {port},العنوان: {ip}   المنفذ: {port},IP : {ip}   Port : {port}
 LOBBY_PLAYERS_COUNT,Players: {count}/20,اللاعبون: {count}/20,Joueurs : {count}/20

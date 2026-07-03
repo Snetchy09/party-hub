@@ -27,6 +27,10 @@ func _on_message(_sender_id: int, message: Dictionary) -> void:
 		"state_update":
 			latest_state = message["state"]
 			_apply_state(latest_state)
+			# Initialize reveal screen the first time we get state during role_reveal phase
+			if latest_state.get("phase", "") == "role_reveal" and current_phase_ui and current_phase_ui.has_method("initialize") and not current_phase_ui.get("_initialized"):
+				current_phase_ui.set("_initialized", true)
+				current_phase_ui.initialize(latest_state, my_player_id)
 		"phase_change":
 			_transition_phase(message["phase"])
 			if message["phase"] == "morning" and current_phase_ui and current_phase_ui.has_method("show_night_events"):
@@ -79,6 +83,7 @@ func _show_role_reveal() -> void:
 	current_phase_ui = load("res://games/werewolves/ui/RoleRevealScreen.tscn").instantiate()
 	content_container.add_child(current_phase_ui)
 	current_phase_ui.reveal_complete.connect(_on_reveal_complete)
+	# Don't initialize yet — wait for state_update message which carries role info
 
 func _on_reveal_complete() -> void:
 	pass  # GameManager handles the actual "all players ready" tracking host-side

@@ -36,6 +36,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
 
+[global]
+
+re=false
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true

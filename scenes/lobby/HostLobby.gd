@@ -7,7 +7,7 @@ extends BaseScreen
 @onready var start_button: Button = $MarginContainer/VBoxContainer/StartButton
 @onready var back_button: Button = $MarginContainer/VBoxContainer/BackButton
 
-const MIN_PLAYERS := 4
+const MIN_PLAYERS := 1
 
 func _ready() -> void:
 	var err := NetworkManager.create_server()
@@ -27,6 +27,9 @@ func _ready() -> void:
 
 	start_button.pressed.connect(_on_start_pressed)
 	back_button.pressed.connect(_on_back_pressed)
+
+	if mode_option.item_count > 0:
+		mode_option.select(0)
 
 	_refresh_player_list()
 
@@ -78,8 +81,9 @@ func _broadcast_lobby_state() -> void:
 func _on_start_pressed() -> void:
 	if PlayerManager.get_all_players().size() < MIN_PLAYERS:
 		return
+	var selected_idx := mode_option.selected if mode_option.selected >= 0 else 0
 	var settings := {
-		"role_pack": mode_option.get_item_text(mode_option.selected),
+		"role_pack": mode_option.get_item_text(selected_idx),
 	}
 	NetworkManager.broadcast_to_all({
 		"type": MessageTypes.GAME_START,
