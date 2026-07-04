@@ -52,15 +52,21 @@ func close() -> void:
 func send_to_host(message: Dictionary) -> void:
 	if not is_active:
 		return
+
+	var my_id := multiplayer.get_unique_id()
+	# If I'm the host (or local peer 1), call the handler locally instead of RPCing to myself
+	if is_host or my_id == 1:
+		message_received.emit(my_id, message)
+		return
+
 	rpc_id(1, "_receive_message", message)  # peer 1 is always the host in ENet
 
-## Call this on the HOST to send to every connected client.
 func broadcast_to_all(message: Dictionary) -> void:
 	if not is_active or not is_host:
 		return
+	message_received.emit(1, message)
 	rpc("_receive_message", message)
 
-## Call this on the HOST to send to one specific client.
 func send_to_peer(peer_id: int, message: Dictionary) -> void:
 	if not is_active or not is_host:
 		return

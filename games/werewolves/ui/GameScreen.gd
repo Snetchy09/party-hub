@@ -20,18 +20,24 @@ const PHASE_TEXT := {
 func _ready() -> void:
 	my_player_id = NetworkManager.get_my_peer_id()
 	NetworkManager.message_received.connect(_on_message)
+
+	# Make announcement overlay ignore mouse input by default and ensure hidden
+	announcement_overlay.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	announcement_overlay.hide()
+
 	_show_role_reveal()
 
 func _on_message(_sender_id: int, message: Dictionary) -> void:
 	match message.get("type", ""):
 		"state_update":
+			print("GameScreen received", message.get("type"))
 			latest_state = message["state"]
 			_apply_state(latest_state)
-			# Initialize reveal screen the first time we get state during role_reveal phase
-			if latest_state.get("phase", "") == "role_reveal" and current_phase_ui and current_phase_ui.has_method("initialize") and not current_phase_ui.get("_initialized"):
-				current_phase_ui.set("_initialized", true)
-				current_phase_ui.initialize(latest_state, my_player_id)
+			if latest_state.get("phase", "") == "role_reveal":
+				if current_phase_ui and current_phase_ui.has_method("initialize"):
+					current_phase_ui.initialize(latest_state, my_player_id)
 		"phase_change":
+			print("GameScreen received", message.get("type"))
 			_transition_phase(message["phase"])
 			if message["phase"] == "morning" and current_phase_ui and current_phase_ui.has_method("show_night_events"):
 				current_phase_ui.show_night_events(message.get("events", []))

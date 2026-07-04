@@ -33,7 +33,7 @@ func _ready() -> void:
 
 	_refresh_player_list()
 
-func _on_client_connected(peer_id: int) -> void:
+func _on_client_connected(_peer_id: int) -> void:
 	# Wait for the client to send player_hello with their name before adding them
 	pass
 

@@ -1,11 +1,11 @@
 extends Control
 
-@onready var role_reminder: Label = $VBox/RoleReminderLabel
-@onready var instruction_label: Label = $VBox/InstructionLabel
-@onready var timer_label: Label = $VBox/TimerLabel
-@onready var player_grid: PlayerGridUI = $VBox/PlayerGrid
-@onready var sleeping_label: Label = $VBox/SleepingLabel
-@onready var secret_chat: SecretChatUI = $VBox/SecretChatPanel
+@onready var role_reminder: Label = $MarginContainer/VBox/RoleReminderLabel
+@onready var instruction_label: Label = $MarginContainer/VBox/InstructionLabel
+@onready var timer_label: Label = $MarginContainer/VBox/TimerLabel
+@onready var player_grid: PlayerGridUI = $MarginContainer/VBox/PlayerGrid
+@onready var sleeping_label: Label = $MarginContainer/VBox/SleepingLabel
+@onready var secret_chat: SecretChatUI = $MarginContainer/VBox/SecretChatPanel
 
 var my_role_id: String = ""
 var can_act: bool = false

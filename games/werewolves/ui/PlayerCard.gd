@@ -7,7 +7,7 @@ signal card_clicked(player_id: int)
 @onready var name_label: Label = $MarginContainer/VBox/NameLabel
 @onready var role_label: Label = $MarginContainer/VBox/RoleLabel
 @onready var status_row: HBoxContainer = $MarginContainer/VBox/StatusRow
-@onready var dead_overlay: ColorRect = $DeadOverlay
+@onready var dead_overlay: ColorRect = $MarginContainer/VBox/DeadOverlay
 
 var player_id: int = -1
 
@@ -37,7 +37,8 @@ func update_from_state(data: Dictionary) -> void:
 		role_label.hide()
 
 	var alive: bool = data.get("alive", true)
-	dead_overlay.visible = not alive
+	if dead_overlay:
+		dead_overlay.visible = not alive
 	modulate = Color(1, 1, 1, 1) if alive else Color(0.5, 0.5, 0.5, 0.85)
 
 	for child in status_row.get_children():

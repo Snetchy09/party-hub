@@ -28,7 +28,7 @@ func initialize(message: Dictionary) -> void:
 		cards.append({
 			"player_id": c["player_id"],
 			"name": c["name"],
-			"avatar_seed": 0,
+			"avatar_data": {},              # no avatar on win screen is fine
 			"alive": c.get("alive", false),
 			"role": c.get("role", ""),
 			"role_display": c.get("role_display", ""),

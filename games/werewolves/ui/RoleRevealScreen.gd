@@ -13,7 +13,7 @@ var my_role_id: String = ""
 var my_role_display: String = ""
 var my_role_description: String = ""
 var my_team: String = ""
-var _initialized: bool = false
+var _has_been_initialized: bool = false
 
 const TEAM_GLOW := {
 	"village": Color(0.4, 0.95, 0.5),
@@ -31,11 +31,15 @@ func _ready() -> void:
 	card_panel.pivot_offset = card_panel.size / 2.0
 
 func initialize(state: Dictionary, my_player_id: int) -> void:
+	if _has_been_initialized:
+		return
+	_has_been_initialized = true
+	print("RoleReveal initialize called for player", my_player_id, "state keys:", state.keys())
 	my_role_id = state.get("my_role", "")
 	my_role_display = state.get("my_role_display", "")
 	my_role_description = state.get("my_role_description", "")
 	my_team = state.get("my_team", "")
-
+	print("my_role_display=", my_role_display, "my_team=", my_team)
 	for c in state.get("cards", []):
 		if c["player_id"] == my_player_id:
 			name_label.text = c.get("name", "You")
@@ -54,17 +58,16 @@ func _on_card_input(event: InputEvent) -> void:
 			_hide_and_complete()
 
 func _reveal() -> void:
+	print("_reveal() called; my_role_display=", my_role_display, "my_role_id=", my_role_id)
 	is_revealed = true
 	var tween := create_tween()
 	tween.tween_property(card_panel, "scale:x", 0.0, 0.15)
 	await tween.finished
-
 	var glow: Color = TEAM_GLOW.get(my_team, Color.WHITE)
 	role_label.text = "◈  %s  ◈" % my_role_display.to_upper()
 	role_label.modulate = glow
 	desc_label.text = my_role_description
 	desc_label.show()
-
 	tween = create_tween()
 	tween.tween_property(card_panel, "scale:x", 1.0, 0.15)
 
@@ -74,8 +77,10 @@ func _hide_and_complete() -> void:
 	tween.tween_property(card_panel, "scale", Vector2(0.3, 0.3), 0.4)
 	tween.parallel().tween_property(card_panel, "modulate:a", 0.0, 0.4)
 	await tween.finished
+	print("hide start")
+	await get_tree().process_frame
+	print("hide after frame")
 	reveal_complete.emit()
-
 	NetworkManager.send_to_host({"type": "reveal_done"})
 	_check_special_modal()
 

@@ -78,6 +78,7 @@ func _setup_special_role(state: WWPlayerState) -> void:
 
 func _start_role_reveal() -> void:
 	match_state.phase = "role_reveal"
+	await get_tree().process_frame
 	_broadcast_state_to_all()
 
 func begin_night_loop() -> void:

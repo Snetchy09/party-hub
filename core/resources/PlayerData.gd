@@ -5,7 +5,7 @@ extends Resource
 @export var display_name: String = "Player"
 @export var peer_id: int = -1
 @export var is_host: bool = false
-@export var is_connected: bool = true
+@export var is_online: bool = true
 @export var is_ready: bool = false
 var avatar_data: AvatarData = AvatarData.new()
 

@@ -1,7 +1,7 @@
 extends Control
 
-@onready var events_container: VBoxContainer = $VBox/EventsContainer
-@onready var player_grid: PlayerGridUI = $VBox/PlayerGrid
+@onready var events_container: VBoxContainer = $MarginContainer/VBox/EventsContainer
+@onready var player_grid: PlayerGridUI = $MarginContainer/VBox/PlayerGrid
 
 func initialize(state: Dictionary, my_player_id: int) -> void:
 	update_state(state)
