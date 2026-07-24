@@ -12,13 +12,13 @@ func _ready() -> void:
 	edit_avatar_button.pressed.connect(_on_edit_avatar_pressed)
 
 func _on_create_pressed() -> void:
-	SceneManager.change_screen(Screens.HOST_LOBBY)
+	SceneManager.change_screen_to_packed(Screens.GAME_SELECT)
 
 func _on_join_pressed() -> void:
-	SceneManager.change_screen(Screens.JOIN_LOBBY)
+	SceneManager.change_screen_to_packed(Screens.JOIN_LOBBY)
 
 func _on_settings_pressed() -> void:
-	SceneManager.change_screen(Screens.SETTINGS)
+	SceneManager.change_screen_to_packed(Screens.SETTINGS)
 
 func _on_edit_avatar_pressed() -> void:
 	var customizer = load("res://core/ui/avatar/AvatarCustomizer.tscn").instantiate()

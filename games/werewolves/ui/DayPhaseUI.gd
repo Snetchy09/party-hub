@@ -1,16 +1,16 @@
 extends Control
 
-@onready var phase_title: Label = $VBox/PhaseTitleLabel
-@onready var timer_label: Label = $VBox/TimerLabel
-@onready var player_grid: PlayerGridUI = $VBox/PlayerGrid
-@onready var vote_count_label: Label = $VBox/VoteCountLabel
-@onready var special_actions_row: HBoxContainer = $VBox/SpecialActionsRow
+@onready var phase_title: Label = $MarginContainer/VBox/PhaseTitleLabel
+@onready var timer_label: Label = $MarginContainer/VBox/TimerLabel
+@onready var player_grid: PlayerGridUI = $MarginContainer/VBox/PlayerGrid
+@onready var vote_count_label: Label = $MarginContainer/VBox/VoteCountLabel
+@onready var special_actions_row: HBoxContainer = $MarginContainer/VBox/SpecialActionsRow
 
 var current_phase: String = ""
 var my_role_id: String = ""
 var has_voted: bool = false
 
-func initialize(state: Dictionary, my_player_id: int) -> void:
+func initialize(state: Dictionary, _my_player_id: int) -> void:
 	update_state(state)
 	player_grid.card_selected.connect(_on_card_selected)
 

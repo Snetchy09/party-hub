@@ -20,11 +20,6 @@ script = ExtResource("1_dnvjj")
 
 [node name="BackgroundScene" parent="." unique_id=287997469 instance=ExtResource("2_gu5mh")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="NightOverlay" type="ColorRect" parent="." unique_id=670954739]
 visible = false
@@ -58,3 +53,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2

@@ -30,14 +30,14 @@ func _ready() -> void:
 func _on_message(_sender_id: int, message: Dictionary) -> void:
 	match message.get("type", ""):
 		"state_update":
-			print("GameScreen received", message.get("type"))
+			#print("GameScreen received", message.get("type"))
 			latest_state = message["state"]
 			_apply_state(latest_state)
 			if latest_state.get("phase", "") == "role_reveal":
 				if current_phase_ui and current_phase_ui.has_method("initialize"):
 					current_phase_ui.initialize(latest_state, my_player_id)
 		"phase_change":
-			print("GameScreen received", message.get("type"))
+			#print("GameScreen received", message.get("type"))
 			_transition_phase(message["phase"])
 			if message["phase"] == "morning" and current_phase_ui and current_phase_ui.has_method("show_night_events"):
 				current_phase_ui.show_night_events(message.get("events", []))

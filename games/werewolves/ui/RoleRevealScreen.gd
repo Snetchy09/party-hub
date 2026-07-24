@@ -58,7 +58,7 @@ func _on_card_input(event: InputEvent) -> void:
 			_hide_and_complete()
 
 func _reveal() -> void:
-	print("_reveal() called; my_role_display=", my_role_display, "my_role_id=", my_role_id)
+	#print("_reveal() called; my_role_display=", my_role_display, "my_role_id=", my_role_id)
 	is_revealed = true
 	var tween := create_tween()
 	tween.tween_property(card_panel, "scale:x", 0.0, 0.15)
@@ -77,9 +77,9 @@ func _hide_and_complete() -> void:
 	tween.tween_property(card_panel, "scale", Vector2(0.3, 0.3), 0.4)
 	tween.parallel().tween_property(card_panel, "modulate:a", 0.0, 0.4)
 	await tween.finished
-	print("hide start")
+	#print("hide start")
 	await get_tree().process_frame
-	print("hide after frame")
+	#print("hide after frame")
 	reveal_complete.emit()
 	NetworkManager.send_to_host({"type": "reveal_done"})
 	_check_special_modal()

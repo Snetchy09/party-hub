@@ -48,8 +48,13 @@ func _on_message_received(_sender_id: int, message: Dictionary) -> void:
 		MessageTypes.LOBBY_STATE:
 			_refresh_player_list(message.get("player_names", []))
 		MessageTypes.GAME_START:
+			var game_id: String = message.get("game_id", "werewolves")
+			var manifest := GameRegistry.get_game(game_id)
 			PlayerManager.local_settings = message.get("settings", {})
-			SceneManager.change_screen(Screens.WEREWOLVES_GAME)
+			if manifest and manifest.main_scene:
+				SceneManager.change_screen_to_packed(manifest.main_scene)
+			else:
+				push_error("JoinLobby: unknown game_id '%s' from host" % game_id)
 
 func _refresh_player_list(names: Array) -> void:
 	for child in player_list_container.get_children():

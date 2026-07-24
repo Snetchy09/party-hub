@@ -2,6 +2,7 @@ extends Node
 
 var players: Dictionary = {}  # peer_id -> PlayerData
 var local_settings: Dictionary = {}
+var selected_game_id: String = "werewolves"
 
 func reset() -> void:
 	players.clear()

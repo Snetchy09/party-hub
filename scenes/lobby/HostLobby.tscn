@@ -15,6 +15,11 @@ script = ExtResource("1_dlwc0")
 
 [node name="BackgroundScene" parent="." unique_id=287997469 instance=ExtResource("2_u7omk")]
 layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1991096358]
 layout_mode = 1
@@ -53,19 +58,8 @@ layout_mode = 2
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=152146250]
 layout_mode = 2
 
-[node name="ModelLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1642698457]
+[node name="GameSettingsContainer" type="Control" parent="MarginContainer/VBoxContainer" unique_id=880453762]
 layout_mode = 2
-text = "Role Pack:"
-
-[node name="ModeOptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer" unique_id=283681381]
-layout_mode = 2
-item_count = 3
-popup/item_0/text = "Basic"
-popup/item_0/id = 0
-popup/item_1/text = "Advanced"
-popup/item_1/id = 1
-popup/item_2/text = "Custom"
-popup/item_2/id = 2
 
 [node name="StartButton" parent="MarginContainer/VBoxContainer" unique_id=608303543 instance=ExtResource("3_l1757")]
 layout_mode = 2

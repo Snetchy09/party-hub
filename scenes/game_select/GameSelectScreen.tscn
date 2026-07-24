@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c6tqpo0jdr46x"]
+
+[ext_resource type="Script" uid="uid://lqxje8vh74rq" path="res://scenes/game_select/GameSelectScreen.gd" id="1_f73i8"]
+[ext_resource type="PackedScene" uid="uid://cg23iyopfayqs" path="res://core/ui/components/PHButton.tscn" id="2_0icne"]
+
+[node name="GameSelectScreen" type="Control" unique_id=1060547992]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f73i8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=398119171]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer" unique_id=1005120320]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBox" unique_id=1950969128]
+layout_mode = 2
+text = "Choose A Game"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBox" unique_id=1200576157]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GameListContainer" type="VBoxContainer" parent="MarginContainer/VBox/ScrollContainer" unique_id=184492714]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BackButton" parent="MarginContainer/VBox" unique_id=608303543 instance=ExtResource("2_0icne")]
+layout_mode = 2
